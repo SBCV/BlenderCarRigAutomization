@@ -1,0 +1,6 @@
+[submodule "BlenderUtility"]
+	path = BlenderUtility
+	url = https://github.com/SBCV/PythonBlenderUtility.git
+[submodule "Utility"]
+	path = Utility
+	url = https://github.com/SBCV/PythonUtility.git

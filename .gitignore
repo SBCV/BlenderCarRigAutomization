@@ -1,0 +1,13 @@
+/.idea/BlenderCarRigAutomization.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/workspace.xml
+/configs/adjust_car_rig.cfg
+/configs/execute.cfg
+/configs/input.cfg
+/configs/use_car_rig.cfg
+*.pyc
+blender/rigged_vehicle.blend
+configs/attach_rig_to_car_model_bckp.cfg
+configs/attach_rig_to_car_model.cfg
+configs/attach_car_rig_to_curve.cfg
