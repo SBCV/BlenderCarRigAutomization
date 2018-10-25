@@ -35,3 +35,8 @@ python Execute_Attach_Rig_to_Car_Model.py
 ```
 to attach the rigged vehicle model to a given motion trajectory.
 This automatically opens a Blender file with the rigged vehicle attached to a trajectory in a simple environment. 
+
+## License
+Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+
+https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en
