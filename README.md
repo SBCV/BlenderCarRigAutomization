@@ -13,22 +13,25 @@ Run
 ```
 python Execute_Attach_Rig_to_Car_Model.py
 ```
-to automatically create the following config file:
+to automatically create the following config files:
 ```
 BlenderCarRigAutomization/BlenderUtility/Configs/blender_script_executor.cfg
+BlenderCarRigAutomization/configs/attach_rig_to_car_model.cfg
 ```
-Adjust the path to the blender executable in ```blender_script_executor.cfg```.
+Adjust the path to the blender executable in ```blender_script_executor.cfg```
+
+and the path to the car rig blend file in ```attach_rig_to_car_model.cfg```
 
 Run (again)
 ```
 python Execute_Attach_Rig_to_Car_Model.py
 ```
-to attach the vehicle rig to a specific car model.
+to attach the vehicle rig to a specific car model. 
+The Blender file with the rigged vehicle is automatically opened afterwards - close it. 
 
 Run 
 ```
 python Execute_Attach_Rig_to_Car_Model.py
 ```
 to attach the rigged vehicle model to a given motion trajectory.
-
-
+This automatically opens a Blender file with the rigged vehicle attached to a trajectory in a simple environment. 
