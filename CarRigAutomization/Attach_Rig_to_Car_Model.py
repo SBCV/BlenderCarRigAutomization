@@ -29,16 +29,6 @@ rig_blend_ifp = attach_rig_to_car_model_config.get_option_value(
 
 check_axle = attach_rig_to_car_model_config.get_option_value('check_axle', target_type=bool)
 
-if not os.path.isfile(vehicle_blend_ifp):
-    logger.vinfo('vehicle_blend_ifp', vehicle_blend_ifp)
-    assert False
-if not os.path.isfile(vehicle_config_ifp):
-    logger.vinfo('path_to_vehicle_config_file', vehicle_config_ifp)
-    assert False
-
-rigged_car_blend_ofp = attach_rig_to_car_model_config.get_option_value(
-    'rigged_car_blend_ofp', target_type=str)
-
 
 def log_tire_names(tire_fl_name, tire_fr_name, tire_bl_name, tire_br_name):
     logger.info('tire_fl_name: ' + tire_fl_name)
@@ -79,6 +69,19 @@ if __name__ == '__main__':
     from BlenderUtility.Modifier_Functions import apply_modifiers
     from CarRigAutomization.Rig_to_Car_Model import prepare_model_for_rigging
     from CarRigAutomization.Rig_to_Car_Model import apply_rig_to_model
+
+    if not os.path.isfile(vehicle_blend_ifp):
+        logger.vinfo('vehicle_blend_ifp', vehicle_blend_ifp)
+        assert False    # Adjust the path to the vehicle model file in attach_rig_to_car_model.cfg
+    if not os.path.isfile(vehicle_config_ifp):
+        logger.vinfo('vehicle_config_ifp', vehicle_config_ifp)
+        assert False    # Adjust the path to the vehicle configuration file in attach_rig_to_car_model.cfg
+    if not os.path.isfile(rig_blend_ifp):
+        logger.vinfo('rig_blend_ifp', rig_blend_ifp)
+        assert False    # Adjust the path to the blender rig file in attach_rig_to_car_model.cfg
+
+    rigged_car_blend_ofp = attach_rig_to_car_model_config.get_option_value(
+        'rigged_car_blend_ofp', target_type=str)
 
     vehicle_config = Config(vehicle_config_ifp)
 

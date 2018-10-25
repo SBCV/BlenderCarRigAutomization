@@ -1,8 +1,8 @@
 import os
 from shutil import copyfile
+
 from Utility.Config import Config
 from BlenderUtility.Blender_Script_Executor import execute_blender_script
-
 
 path_to_scripts = os.path.dirname(os.path.realpath(__file__))
 path_to_render_trajectory = os.path.join(path_to_scripts, 'CarRigAutomization', 'Attach_Car_Rig_To_Curve.py')
