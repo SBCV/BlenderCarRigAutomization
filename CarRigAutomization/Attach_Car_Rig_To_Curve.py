@@ -5,7 +5,6 @@ from Utility.Config import Config
 import bpy
 from BlenderUtility.Ops_Functions import configure_scene_for_basic_ops
 from BlenderUtility.Import_Export_Functions import high_level_object_import_from_other_blend_file
-from CarRigAutomization.Car_Rig_to_Curve import configure_car_rig_for_path_and_ground
 
 
 def get_car_rig_names(car_rig_prefix=None, car_rig_suffix=None):
@@ -38,17 +37,18 @@ def get_car_rig_names(car_rig_prefix=None, car_rig_suffix=None):
     return car_rig_names
 
 
-if __name__:
+if __name__ == '__main__':
 
+    from CarRigAutomization.Car_Rig_to_Curve import configure_car_rig_for_path_and_ground
     parent_dp = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
-    use_car_rig_config_fp = os.path.join(parent_dp, 'configs/attach_car_rig_to_curve.cfg')
+    attach_car_rig_to_curve_config_fp = os.path.join(parent_dp, 'configs/attach_car_rig_to_curve.cfg')
 
-    use_car_rig_config = Config(path_to_config_file=use_car_rig_config_fp)
-    path_object_name = use_car_rig_config.get_option_value('path_object_name', str)
-    ground_object_name = use_car_rig_config.get_option_value('ground_object_name', str)
+    attach_car_rig_to_curve_config = Config(path_to_config_file=attach_car_rig_to_curve_config_fp)
+    path_object_name = attach_car_rig_to_curve_config.get_option_value('path_object_name', str)
+    ground_object_name = attach_car_rig_to_curve_config.get_option_value('ground_object_name', str)
 
-    rigged_vehicle_blend_file_path = use_car_rig_config.get_option_value(
+    rigged_vehicle_blend_file_path = attach_car_rig_to_curve_config.get_option_value(
         'rigged_vehicle_blend_file_path', target_type=str)
 
     high_level_object_import_from_other_blend_file(

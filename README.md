@@ -31,7 +31,7 @@ The Blender file with the rigged vehicle is automatically opened afterwards - cl
 
 Run 
 ```
-python Execute_Attach_Rig_to_Car_Model.py
+python Execute_Attach_Car_Rig_To_Curve.py
 ```
 to attach the rigged vehicle model to a given motion trajectory.
 This automatically opens a Blender file with the rigged vehicle attached to a trajectory in a simple environment. 
